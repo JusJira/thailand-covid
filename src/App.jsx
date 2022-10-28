@@ -19,9 +19,10 @@ function App() {
     });
   }, []);
   return (
-    <Flex h={'100vh'} alignItems={'center'} justifyContent={'center'}>
+    <Flex h={'100vh'} alignItems={'center'} justifyContent={'center'} bgColor='transparent'>
       <ColorToggle size={isNotSmallerScreen}/>
-      <VStack bgColor='transparent'>
+      <VStack >
+      
       <Box padding={25}><Heading fontSize={'3xl'} fontWeight={600}>Thailand Covid Cases</Heading></Box>
         {loaded ?<>
           <Grid templateColumns={isNotSmallerScreen ? 'repeat(2, 1fr)' : '1fr'} gap={6} w={isNotSmallerScreen ? '50vw' : '80vw'} padding='10px' alignItems='center'>

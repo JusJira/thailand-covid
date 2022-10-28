@@ -17,7 +17,7 @@ function ColorToggle(props) {
     })
 
     return (
-        <Flex gap={2} position={'fixed'} top={0} right={0} margin={8} alignItems={'center'} justifyContent={'center'}>
+        <Flex gap={2} position={'fixed'} top={0} right={0} margin={6} alignItems={'center'} justifyContent={'center'} height={30}>
             <Switch size={isNotSmallerScreen ? 'lg' : 'md'} colorScheme={'teal'} isChecked={isCheck} onChange={toggleColorMode} />
             {colorMode == 'light' ? <FaSun fontSize={isNotSmallerScreen ? 30 : 20}/> : <FaMoon fontSize={isNotSmallerScreen ? 30 : 20}/>}
         </Flex>
