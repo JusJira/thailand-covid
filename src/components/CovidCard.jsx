@@ -1,34 +1,34 @@
 import React from 'react'
-import { Box, Text, Center } from '@chakra-ui/react'
-import { useColorModeValue } from '@chakra-ui/color-mode';
+import { Box, Text, useMediaQuery } from '@chakra-ui/react'
 import { GridItem } from '@chakra-ui/react'
 
 
 function CovidCard(props) {
-    var { name, value, color, row } = props
+    const [isLandscape] = useMediaQuery("(orientation: landscape)")
+    var { name, value, color, row  } = props
 
     return (
         <GridItem
             bgColor={color}
             rounded={'lg'}
             w='100%'
-            h='100%'
+            h={isLandscape ? '100%' : '30vmin'}
             rowSpan={row}
-            display={'flex'}
-            alignItems={'center'}
-            justifyContent={'center'}>
+            colSpan={1}
+            >
             <Box
                 boxShadow={'2xl'}
-                w={'full'}
-                h={'full'}
+                w={'100%'}
+                h={'100%'}
+                rounded={'lg'}
                 display={'flex'}
                 flexDirection={'column'}
                 alignItems={'center'}
                 justifyContent={'center'}
                 padding={4}
                 >
-                <Text color={'black'} fontWeight={600} fontSize={'2xl'}>{name}</Text>
-                <Text color={'white'} fontWeight={500} fontSize={'xl'}>{value}</Text>
+                <Text color={'black'} textAlign={'center'} fontWeight={600} fontSize={'1.5rem'}>{name}</Text>
+                <Text color={'white'} textAlign={'center'}  fontWeight={500} fontSize={'1rem'}>{value}</Text>
             </Box>
         </GridItem>
 
