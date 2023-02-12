@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Switch, IconButton, useColorMode , Flex, color } from '@chakra-ui/react'
+import { Switch, useColorMode , Flex } from '@chakra-ui/react'
 import { FaSun, FaMoon } from 'react-icons/fa'
 
 function ColorToggle(props) {
